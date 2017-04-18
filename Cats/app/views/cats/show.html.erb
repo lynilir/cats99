@@ -1,0 +1,25 @@
+
+<h1><%= @cat.name %></h1>
+<img src="https://lh3.googleusercontent.com/-UJBR1vtncVM/WPV9t5ZzTfI/AAAAAAAAEtk/tHiWsw2FJJI4FSeWNDPHgPWcetjO2_HaQCK8B/s512/8555019567644794321%253Faccount_id%253D1" alt="Kitty">
+<table>
+  <tr>
+    <th>Attribute</th>
+    <th>Value</th>
+  </tr>
+  <tr>
+    <td>ID</td>
+    <td><%= @cat.id %></td>
+  <tr>
+    <td>Sex</td>
+    <td><%= @cat.sex %></td>
+  </tr>
+  <tr>
+    <td>Birthday</td>
+    <td><%= @cat.birth_date %></td>
+  </tr>
+    <td>Description</td>
+    <td><%= @cat.description %></td>
+  </tr>
+</table>
+
+<%= link_to "All Cats", cats_url %>

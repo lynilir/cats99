@@ -1,0 +1,50 @@
+<h1>Update a Cat!</h1>
+
+<form action="<%= cat_url(cat.id) %>" method="POST">
+  <input type="hidden" name="_method" value="PATCH">
+  <label for="name">Name</label>
+  <input id="name" type="text" name="cat[name]" value="<%= cat.name%>">
+
+  <br>
+  <label for="sex">Sex</label>
+
+  <input
+    type="radio"
+    name="cat[sex]"
+    value="M"
+    id="cat_sex_male"
+    <%= @cat.sex == "M" ? "checked" : "" %>>
+  <label for="cat_sex_male">Male</label>
+  <input
+    type="radio"
+    name="cat[sex]"
+    value="F"
+    id="cat_sex_female"
+    <%= @cat.sex == "F" ? "checked" : "" %>>
+  <label for="cat_sex_female">Female</label>
+  <br>
+
+  <label for="color">Color</label>
+  <select id="color" name="cat[color]">
+    <option value="Select Color" disabled="true" selected="true">Select Color</option>
+
+    <option value="black">Black</option>
+    <option value="brown">Brown</option>
+    <option value="white">White</option>
+    <option value="orange">Orange</option>
+
+  </select>
+  <br>
+
+  <label for="birth_date">Birthday</label>
+  <input name ="cat[birth_date]" id="birth_date" type="date">
+
+  <br><br>
+  <label>Description
+    <br>
+    <textarea name="cat[description]" cols="30" rows="10"></textarea>
+  <label>
+    <br>
+
+  <input type="submit" value="Submit">
+</form>
