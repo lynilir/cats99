@@ -22,4 +22,5 @@
   </tr>
 </table>
 
+<%= button_to 'Delete', cat_url(@cat), method: :delete, data: { confirm: 'Are you sure?' } %> 
 <%= link_to "All Cats", cats_url %>
